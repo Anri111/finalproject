@@ -1,0 +1,39 @@
+@import "tailwindcss";
+
+/* ---- Self-hosted fonts (variable) ---- */
+@font-face {
+  font-family: "Nunito";
+  src: url("/assets/fonts/Nunito/Nunito-VariableFont_wght.ttf") format("truetype");
+  font-weight: 200 1000;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Nunito Sans";
+  src: url("/assets/fonts/Nunito_Sans/NunitoSans-VariableFont_YTLC,opsz,wdth,wght.ttf") format("truetype");
+  font-weight: 200 1000;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ---- Design tokens ----
+   NOTE: these hex values are approximated from the design screenshots.
+   Confirm them against the Figma design system before you trust them. */
+@theme {
+  --color-cream: #f4f0e7;       /* page background */
+  --color-forest: #13352b;      /* primary dark green: buttons, headings */
+  --color-forest-700: #1c4a3c;  /* hover state for green buttons */
+  --color-orange: #e8722e;      /* accent: logo flame, active underline */
+  --color-ink: #08130d;         /* heading text */
+  --color-muted: #5b6660;       /* body text */
+
+  --font-heading: "Nunito", system-ui, sans-serif;
+  --font-body: "Nunito Sans", system-ui, sans-serif;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  background-color: var(--color-cream);
+  color: var(--color-muted);
+}
