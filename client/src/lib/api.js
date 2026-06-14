@@ -1,7 +1,9 @@
+const API_BASE = import.meta.env.VITE_API_URL || '/api';
+
 // Thin fetch wrapper. credentials:"include" ensures the session cookie rides
 // along with every request (and the proxy keeps us same-origin in dev).
 async function request(path, options = {}) {
-  const res = await fetch(`/api${path}`, {
+  const res = await fetch(`${API_BASE}${path}`, {
     credentials: "include",
     headers: { "Content-Type": "application/json", ...options.headers },
     ...options,
